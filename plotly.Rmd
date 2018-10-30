@@ -1,5 +1,9 @@
 ---
 title: "Plotly"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
 ---
 
 ```{r setup, include=FALSE}
@@ -11,4 +15,66 @@ library(flexdashboard)
 library(plotly)
 ```
 
+### Read and clean the data
+
+```{r}
+set.seed(1)
+
+data(ny_noaa)
+
+ny_noaa = 
+  janitor::clean_names(ny_noaa) %>% 
+  separate(date, c("year", "month", "day"), sep = "-") %>% 
+  mutate(prcp = prcp / 10,
+         tmax = as.numeric(tmax) / 10,
+         tmin = as.numeric(tmin) / 10)
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+ny_noaa %>% 
+  filter(month == "01", year %in% c("2005", "2006", "2007", "2008", "2009", "2010")) %>% 
+  mutate(month = recode(month, "01" = "January")) %>% 
+  group_by(id, year, month) %>% 
+  summarize(mean_tmax = mean(tmax, na.rm = T)) %>% 
+  plot_ly(y = ~mean_tmax, color = ~year, type = "box",
+          colors = "Set2") %>% 
+  layout(title = "Average Max Temperature in January in Each Station Across Years(2005-2010)")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+tmax_tmin = 
+  ny_noaa %>% 
+  ggplot(aes(x = tmax, y = tmin)) +
+  geom_hex() +
+  geom_smooth(se = FALSE) +
+  labs(
+    title = "Tmax vs Tmin",
+    x = "Maximum Temperature",
+    y = "Minimum Temperature",
+    caption = "Data from p8105.datasets package") +
+  theme(legend.position = "bottom",
+        legend.key.width = unit(2, "cm"))
+
+ggplotly(tmax_tmin)
+```
+
+### Chart C
+
+```{r}
+ny_noaa %>% 
+  filter(year == "2010") %>% 
+  plot_ly(x = ~month, y = ~snow, color = ~month, type = "bar") %>% 
+  layout(title = "Snowfall in Each Month of 2010") 
+```
 
