@@ -1,7 +1,14 @@
 ---
-title: "p8105_hw4_zw2541"
+title: "Home"
 ---
 
-### I have a webpage!
+## This is my forth Data Science Homework
 
-And I can put all kinds of stuff on it!
+* Click "Resume"  in the site navigation to check my academic and professional experience.
+
+* Click "Plotly" in the site navigation to check the plots in problem 2.
+
+* Click "envelope logo" in the site navigation to connect with me.
+
+* Click "Github logo" in the site navigation to review my github page of this homework.
+
