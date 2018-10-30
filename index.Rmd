@@ -6,7 +6,7 @@ title: "Home"
 
 * Click "Resume"  in the site navigation to check my academic and professional experience.
 
-* Click "Plotly" in the site navigation to check the plots in problem 2.
+* Click "Plotly" in the site navigation to check the flexdashboard of plots in problem 2.
 
 * Click "envelope logo" in the site navigation to connect with me.
 

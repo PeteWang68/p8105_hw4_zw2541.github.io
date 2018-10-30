@@ -4,6 +4,11 @@ title: "Plotly"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(hexbin)
+library(p8105.datasets)
+library(flexdashboard)
+library(plotly)
 ```
 
 
