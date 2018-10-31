@@ -2,7 +2,7 @@
 title: "Home"
 ---
 
-## This is my forth Data Science Homework
+## This is my fourth Data Science Homework
 
 * Click "Resume"  in the site navigation to check my academic and professional experience.
 
