@@ -15,9 +15,7 @@ library(flexdashboard)
 library(plotly)
 ```
 
-### Read and clean the data
-
-```{r}
+```{r, echo = FALSE}
 set.seed(1)
 
 data(ny_noaa)
@@ -36,7 +34,7 @@ Column {data-width=650}
 
 ### Chart A
 
-```{r}
+```{r, echo = FALSE, warning = FALSE}
 ny_noaa %>% 
   filter(month == "01", year %in% c("2005", "2006", "2007", "2008", "2009", "2010")) %>% 
   mutate(month = recode(month, "01" = "January")) %>% 
@@ -52,12 +50,11 @@ Column {data-width=350}
 
 ### Chart B
 
-```{r}
+```{r, echo = FALSE, warning = FALSE}
 tmax_tmin = 
   ny_noaa %>% 
   ggplot(aes(x = tmax, y = tmin)) +
   geom_hex() +
-  geom_smooth(se = FALSE) +
   labs(
     title = "Tmax vs Tmin",
     x = "Maximum Temperature",
@@ -71,7 +68,7 @@ ggplotly(tmax_tmin)
 
 ### Chart C
 
-```{r}
+```{r, echo = FALSE, warning = FALSE}
 ny_noaa %>% 
   filter(year == "2010") %>% 
   plot_ly(x = ~month, y = ~snow, color = ~month, type = "bar") %>% 
