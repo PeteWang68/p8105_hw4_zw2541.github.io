@@ -1,9 +1,38 @@
 ---
 title: "Resume"
 ---
+## Resume
 
-### About this site
+### Education
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+*Tianjin University (TJU)*, School of Pharmaceutical Science and Technology
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+*Bachelor of Science in Pharmaceutical Sciences* (Expected: 06/2018) 
+
+
+### Laboratory Experiences
+
+*Undergraduate Graduation Project:* Molecular Shuttling during Muscle Exercise 
+
+*Aka. National Undergraduate Innovation Training Program:* The Influences of Mechanical Force Actions on Human Muscle Cells
+
+Team Leader, supervised by Prof. Fumihiko Nakamura (11/2016-present)
+
+* Label primary human skeletal mucle (hsSKM) cells with stable isotope using labeled amino acids in cell culture.
+* Establish a method to isolate nucleus.
+* Establish culture condition of hsSKM on elastic material.
+* Determine proteomes in the isolated nucleus by mass spectrometer and analyze the
+data using MaxQuant and Perseus softwares.
+* Confirm the molecular shuttling by western blotting and immunofluorescent
+microscopy before and after cell stretching.
+* Part of the NSFC funded project: Research on Intracellular Mechanotransduction
+
+*National Undergraduate Innovation Training Program:* Hypervalent Iodine- Mediated Synthesis of Fluorinated 2H-Azirines
+
+Laboratory Assistant, supervised by Prof. Yunfei Du 05/2016-11/2016
+
+* Assist a Ph.D. student in relevant experiments
+* Design and synthesize different kinds of enamine (A) and calculate the yield (%)
+* Use the enamine (A) to synthesize different 2-Fluorine-2H-Azirine
+* Expand the types of the substrates and products by developing more kinds of
+   substituents
